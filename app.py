@@ -9,6 +9,10 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
+@app.route('/hotdog/')
+def hotdog():
+    return render_template('hotdog.html')
+
 @app.route('/predict',methods=['POST'])
 def predict():
 
